@@ -14,6 +14,12 @@
 		F9D6A8DD2EAA6FAC009E563B /* ClashLikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6A8DC2EAA6FAC009E563B /* ClashLikeTests.swift */; };
 		F9D6A8E72EAA6FAC009E563B /* ClashLikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6A8E62EAA6FAC009E563B /* ClashLikeUITests.swift */; };
 		F9D6A8E92EAA6FAC009E563B /* ClashLikeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6A8E82EAA6FAC009E563B /* ClashLikeUITestsLaunchTests.swift */; };
+		F9D6A8F62EAA701B009E563B /* َUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6A8F52EAA701B009E563B /* َUtilities.swift */; };
+		F9D6A8F82EAA7041009E563B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6A8F72EAA7041009E563B /* Models.swift */; };
+		F9D6A8FA2EAA709F009E563B /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6A8F92EAA709F009E563B /* GameEngine.swift */; };
+		F9D6A8FD2EAA7119009E563B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6A8FC2EAA7119009E563B /* MapView.swift */; };
+		F9D6A8FF2EAA7147009E563B /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6A8FE2EAA7147009E563B /* HUDView.swift */; };
+		F9D6A9012EAA7171009E563B /* BuildingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6A9002EAA7171009E563B /* BuildingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		F9D6A8E22EAA6FAC009E563B /* ClashLikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClashLikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D6A8E62EAA6FAC009E563B /* ClashLikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashLikeUITests.swift; sourceTree = "<group>"; };
 		F9D6A8E82EAA6FAC009E563B /* ClashLikeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashLikeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F9D6A8F52EAA701B009E563B /* َUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "َUtilities.swift"; sourceTree = "<group>"; };
+		F9D6A8F72EAA7041009E563B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F9D6A8F92EAA709F009E563B /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		F9D6A8FC2EAA7119009E563B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		F9D6A8FE2EAA7147009E563B /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		F9D6A9002EAA7171009E563B /* BuildingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +106,14 @@
 		F9D6A8CA2EAA6FA3009E563B /* ClashLike */ = {
 			isa = PBXGroup;
 			children = (
+				F9D6A8FB2EAA70F3009E563B /* Views */,
 				F9D6A8CB2EAA6FA3009E563B /* ClashLikeApp.swift */,
 				F9D6A8CD2EAA6FA3009E563B /* ContentView.swift */,
 				F9D6A8CF2EAA6FAB009E563B /* Assets.xcassets */,
 				F9D6A8D12EAA6FAB009E563B /* Preview Content */,
+				F9D6A8F52EAA701B009E563B /* َUtilities.swift */,
+				F9D6A8F72EAA7041009E563B /* Models.swift */,
+				F9D6A8F92EAA709F009E563B /* GameEngine.swift */,
 			);
 			path = ClashLike;
 			sourceTree = "<group>";
@@ -125,6 +141,16 @@
 				F9D6A8E82EAA6FAC009E563B /* ClashLikeUITestsLaunchTests.swift */,
 			);
 			path = ClashLikeUITests;
+			sourceTree = "<group>";
+		};
+		F9D6A8FB2EAA70F3009E563B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F9D6A8FC2EAA7119009E563B /* MapView.swift */,
+				F9D6A8FE2EAA7147009E563B /* HUDView.swift */,
+				F9D6A9002EAA7171009E563B /* BuildingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D6A8FF2EAA7147009E563B /* HUDView.swift in Sources */,
+				F9D6A8FA2EAA709F009E563B /* GameEngine.swift in Sources */,
+				F9D6A8FD2EAA7119009E563B /* MapView.swift in Sources */,
 				F9D6A8CE2EAA6FA3009E563B /* ContentView.swift in Sources */,
+				F9D6A8F62EAA701B009E563B /* َUtilities.swift in Sources */,
 				F9D6A8CC2EAA6FA3009E563B /* ClashLikeApp.swift in Sources */,
+				F9D6A9012EAA7171009E563B /* BuildingView.swift in Sources */,
+				F9D6A8F82EAA7041009E563B /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

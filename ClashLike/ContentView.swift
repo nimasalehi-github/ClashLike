@@ -8,19 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var engine: GameEngine
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            ZStack {
+                MapView()
+                    .environmentObject(engine)
+                    .edgesIgnoringSafeArea(.all)
+
+                VStack {
+                    Spacer()
+                    HUDView()
+                        .environmentObject(engine)
+                        .padding()
+                }
+            }
+            .navigationTitle("FortressGrid")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { engine.exportLayout() }) {
+                        Text("Export")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: { engine.loadSampleLayout() }) {
+                        Text("Sample")
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(GameEngine.preview)
     }
 }
