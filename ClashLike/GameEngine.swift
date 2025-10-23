@@ -97,17 +97,24 @@
 //    }
 //}
 // مرحلهٔ ۱ — دیباگ GameEngine.swift
-// لطفاً هر خط را به صورت دو کامنت توضیح بده: فارسی + English
-// در هر کامنت اشاره کن که آن خط چه مفهومی در شیءگرایی (OOP) و ساختارِ Swift دارد.
-// مثال کامنت: // فارسی: این متغیر حالت بازی را نگه می‌دارد. // EN: Holds game state. (OOP: property of observable object)
 
+// EN: Imports the Foundation framework to use basic Swift utilities like data handling, JSON encoding/decoding, and date/time.
+// Data lifecycle: Foundation enables creation, storage, transformation, and reading of data, allowing it to flow between model and Views.
+// OOP: Foundation is a dependency used by our class; it supports object-oriented data management.
 import Foundation
+
 import Combine
 
 // Game engine: manages grid, buildings, placement rules
 final class GameEngine: ObservableObject {
     // 1
     static var preview: GameEngine {
+    // فارسی: تعریف یک property ایستا (static) به نام preview که نمونه‌ای از GameEngine را برمی‌گرداند.
+    // چرخه زندگی داده‌ها: این property فقط در زمان Preview ساخته می‌شود و داده‌های نمونه را برای SwiftUI آماده می‌کند، بدون اینکه داده واقعی مدل را تغییر دهد.
+    // EN: Defines a static property named 'preview' returning an instance of GameEngine.
+    // Data lifecycle: This property is only created during Preview, populating sample data for SwiftUI without affecting real model data.
+    // OOP: Provides a factory-like method for creating a test instance; encapsulates object creation logic.
+
         // 2
         let eng = GameEngine()
         // 3
